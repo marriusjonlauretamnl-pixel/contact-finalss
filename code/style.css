@@ -1,0 +1,314 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Lucida Sans", sans-serif;
+    min-height: 100vh;
+   display: grid;
+   grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "Top-header Top-header"
+    "main main"
+    "mainfooter mainfooter";
+}
+
+/*This is for top header*/
+
+.Top-header{
+    flex-wrap: wrap;
+    background-color:  rgb(42, 7, 34);
+    grid-area: Top-header;
+    padding: 15px;
+    display: flex;
+    justify-content:end;
+}
+
+.Top-header ul, li{
+    gap: 70px;
+     display: flex;
+    list-style-type: none;
+}
+
+.Top-header img{
+    height: 20px;
+}
+
+/*This is for main navigation*/
+
+.header{
+      color: white;
+    background-color: rgb(71, 12, 58);
+    padding: 25px 25px;
+    display: flex;
+    justify-content: space-between;
+    grid-area: Top-header ;
+    align-items: center;
+ 
+}
+
+.header img{
+     height: 50px;
+}
+
+.navbar, .navbar a{
+    font-weight:bold;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    gap: 10px;
+}
+
+.banner img{
+    display: block;
+    width: 100%;
+
+}
+
+
+/*This is for main content*/
+main{
+    justify-items: center;
+    background-color: rgb(27, 8, 23);
+    grid-area: main;
+}
+
+.content1{
+    justify-self: left;
+    text-align: justify;
+    padding: 50px;
+    color: white;
+}
+
+/*This is for Player Cards*/
+.player-card{
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+gap: 35px;
+}
+
+.card:hover {
+  background-color: #d669f1;
+  transform: scale(1.1); 
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.card{
+    background-color: rgb(26, 8, 44);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+h2{
+    padding: 20px;
+    text-align: center;
+}
+
+.card h3{
+padding: 10px;
+}
+
+.card p{
+    padding: 10px;
+}
+
+
+/*This is for aside*/
+
+
+
+/*This is for footer*/
+ 
+footer{
+    padding: 30px;
+    color: white;
+   background-color:  rgb(42, 7, 34);
+    grid-area: mainfooter ;
+}
+
+footer img{
+    height: 40px;
+}
+
+hr{
+     width: 100%;
+}
+
+
+/*banner  */
+.contact-banner {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./images/1500x500.jpg") center/cover;
+    display: flex;
+    justify-content: center; 
+    align-items: flex-end; 
+    padding-bottom: 50px; 
+}
+
+.banner-overlay {
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.banner-overlay h1 {
+    font-size: 70px;
+    letter-spacing: 5px;
+    color: beige;
+}
+
+.banner-overlay p {
+    margin-top: 15px;
+    font-size: 20px;
+    color: beige;
+}
+
+/* contact     */
+
+.contact-section {
+    padding: 70px;
+    color: #fff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.contact-left h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.contact-right form {
+    background-color: #1a082c;
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(255, 0, 200, 0.15);
+}
+
+.contact-right label {
+    margin: 15px 0 5px;
+    font-weight: 700;
+}
+
+.contact-right input,
+.contact-right textarea {
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.button-group input {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #d669f1;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.button-group input:hover {
+    background-color: #a032ff;
+    transform: scale(1.03);
+}
+
+ /*web creator */
+.content2 {
+    padding: 70px;
+    color: #fff;
+    text-align: center;
+}
+
+.content2 h2 {
+    font-size: 45px;
+}
+
+.creator-text {
+    margin-top: 10px;
+    color: #c8c8c8;
+}
+
+.content2 .player-card {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card2 {
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #1a082c;
+    padding: 20px;
+    transition: .3s;
+}
+
+.card2 img {
+    width: 100%;           
+    max-width: 260px;         
+    height: 320px;            
+    object-fit: cover;        
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.card2:hover {
+    transform: translateY(-5px);
+}
+
+.card2:hover img {
+    transform: scale(1.05);
+}
+
+
+/*Other things*/
+
+@media (max-width: 768px){
+
+    .header{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar{
+        gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+     .player-card {
+        grid-template-columns: 1fr; 
+    }
+
+    .card {
+        width: 100%;
+        max-width: 450px; 
+    }
+
+}
